@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <% @posts.each do |post| %>
+            <div class="insta-post">
+                <div class="post-meta">
+                    <%= post.account.username %>
+                </div>
+                    <%= image_tag post.image.url, class: "img img-fluid" %>
+            </div>
+            <% end %>
+        </div>
+        <div class="col-md-4">
+            <div class="account-summary">
+                <%= current_account.username %><br />
+                <%= current_account.full_name %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
